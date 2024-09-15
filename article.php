@@ -80,7 +80,7 @@ else{
 							<span class="opener">Irodalom</span>
 							<ul>
 								<li><a href="prose.php">Próza</a></li>
-								<li><a href="poem.php">Vers</a></li>
+								<li><a href="lira.php">Líra</a></li>
 							</ul>
 						</li>
 						<li id="menu-kritika"><a href="criticism.php">Kritika</a></li>

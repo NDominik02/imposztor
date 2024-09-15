@@ -9,7 +9,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Irodalom | Próza - IMPOSZTOR</title>
+		<title>Irodalom | Líra - IMPOSZTOR</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -107,7 +107,7 @@
 						<span class="opener" id="menu-irodalom">Irodalom</span>
 						<ul>
 							<li id="menu-proza"><a href="prose.php">Próza</a></li>
-								<li id="menu-vers"><a href="poem.php">Vers</a></li>
+								<li id="menu-lira"><a href="lira.php">Líra</a></li>
 							</ul>
 						</li>
 						<li id="menu-kritika"><a href="criticism.php">Kritika</a></li>

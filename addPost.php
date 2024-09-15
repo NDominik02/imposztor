@@ -90,6 +90,7 @@ html{
 
 }
 body {
+    overflow-y: scroll;
     background-color: var(--clr-white);
     color: var(--clr-dark);
     font-family: Arial, Helvetica, sans-serif;
@@ -203,7 +204,7 @@ footer {
                 <label for="type">Menüpont: </label>
                 <select id="type" name="type" style="width: 68.5%">
                     <option value="prose" <?php echo (isset($form_data['type']) && $form_data['type'] === 'prose') ? 'selected' : ''; ?>>Próza</option>
-                    <option value="poem" <?php echo (isset($form_data['type']) && $form_data['type'] === 'poem') ? 'selected' : ''; ?>>Vers</option>
+                    <option value="lira" <?php echo (isset($form_data['type']) && $form_data['type'] === 'lira') ? 'selected' : ''; ?>>Líra</option>
                     <option value="criticism" <?php echo (isset($form_data['type']) && $form_data['type'] === 'criticism') ? 'selected' : ''; ?>>Kritika</option>
                     <option value="recommendation" <?php echo (isset($form_data['type']) && $form_data['type'] === 'recommendation') ? 'selected' : ''; ?>>Ajánló</option>
                     <option value="events" <?php echo (isset($form_data['type']) && $form_data['type'] === 'events') ? 'selected' : ''; ?>>Események</option>

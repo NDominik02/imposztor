@@ -42,8 +42,8 @@ window.onload = function () {
     } else if (url.includes('prose')) {
         document.getElementById('menu-proza').classList.add('active-proza');
         document.getElementById('menu-irodalom').classList.add('active-irodalom');
-    } else if (url.includes('poem')) {
-        document.getElementById('menu-vers').classList.add('active-vers');
+    } else if (url.includes('lira')) {
+        document.getElementById('menu-lira').classList.add('active-lira');
         document.getElementById('menu-irodalom').classList.add('active-irodalom');
     }
 };

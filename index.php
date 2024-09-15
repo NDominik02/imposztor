@@ -60,7 +60,7 @@
 						<header>
 							<?php
 							$isThereAPost = false;
-							$header_title = "Legfrissebb cikk";
+							$header_title = "hamarosan";
 							if(count($posts) != 0 && $posts["post".count($posts)-1]->type == "imprint")
 							{
 								if(count($posts) != 1)
@@ -224,7 +224,7 @@
 						<span class="opener" id="menu-irodalom">Irodalom</span>
 							<ul>
 								<li id="menu-proza"><a href="prose.php">Próza</a></li>
-								<li id="menu-vers"><a href="poem.php">Vers</a></li>
+								<li id="menu-lira"><a href="lira.php">Líra</a></li>
 							</ul>
 						</li>
 						<li id="menu-kritika"><a href="criticism.php">Kritika</a></li>
