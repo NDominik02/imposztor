@@ -205,7 +205,7 @@ footer {
                     <option value="prose" <?php echo (isset($form_data['type']) && $form_data['type'] === 'prose') ? 'selected' : ''; ?>>Próza</option>
                     <option value="lira" <?php echo (isset($form_data['type']) && $form_data['type'] === 'lira') ? 'selected' : ''; ?>>Líra</option>
                     <option value="criticism" <?php echo (isset($form_data['type']) && $form_data['type'] === 'criticism') ? 'selected' : ''; ?>>Kritika</option>
-                    <option value="recommendation" <?php echo (isset($form_data['type']) && $form_data['type'] === 'recommendation') ? 'selected' : ''; ?>>Ajánló</option>
+                    <option value="essay" <?php echo (isset($form_data['type']) && $form_data['type'] === 'essay') ? 'selected' : ''; ?>>Esszé</option>
                     <option value="events" <?php echo (isset($form_data['type']) && $form_data['type'] === 'events') ? 'selected' : ''; ?>>Események</option>
                     <option value="imprint" <?php echo (isset($form_data['type']) && $form_data['type'] === 'imprint') ? 'selected' : ''; ?>>Impresszum</option>
                 </select><br>

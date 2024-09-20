@@ -9,7 +9,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Ajánló - IMPOSZTOR</title>
+		<title>Esszé - IMPOSZTOR</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -33,7 +33,7 @@
 								<?php
 									for($i = count($posts) - 1; $i >= 0; $i--) // Visszafelé megyünk
 									{
-										if($posts["post" . $i]->type == "recommendation")
+										if($posts["post" . $i]->type == "essay")
 										{
 											$maxLength = rand(150, 200);
 											$sentence = $posts["post" . $i]->text;
@@ -111,7 +111,7 @@
 							</ul>
 						</li>
 						<li id="menu-kritika"><a href="criticism.php">Kritika</a></li>
-						<li id="menu-ajanlo"><a href="recommendation.php">Ajánló</a></li>
+						<li id="menu-essay"><a href="essay.php">Esszé</a></li>
 						<li id="menu-esemenyek"><a href="events.php">Események</a></li>
 						<li id="menu-impresszum"><a href="imprint.php">Impresszum</a></li>
 					</ul>

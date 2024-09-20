@@ -33,8 +33,8 @@ window.onload = function () {
         document.getElementById('menu-fooldal').classList.add('active-fooldal');
     } else if (url.includes('criticism')) {
         document.getElementById('menu-kritika').classList.add('active-kritika');
-    } else if (url.includes('recommendation')) {
-        document.getElementById('menu-ajanlo').classList.add('active-ajanlo');
+    } else if (url.includes('essay')) {
+        document.getElementById('menu-essay').classList.add('active-essay');
     } else if (url.includes('events')) {
         document.getElementById('menu-esemenyek').classList.add('active-esemenyek');
     } else if (url.includes('imprint')) {

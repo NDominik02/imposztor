@@ -228,7 +228,7 @@
 							</ul>
 						</li>
 						<li id="menu-kritika"><a href="criticism.php">Kritika</a></li>
-						<li id="menu-ajanlo"><a href="recommendation.php">Ajánló</a></li>
+						<li id="menu-essay"><a href="essay.php">Esszé</a></li>
 						<li id="menu-esemenyek"><a href="events.php">Események</a></li>
 						<li id="menu-impresszum"><a href="imprint.php">Impresszum</a></li>
 					</ul>

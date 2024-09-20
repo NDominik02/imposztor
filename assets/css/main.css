@@ -992,7 +992,7 @@
   #menu-kritika a:hover{
     color: #b13ab4 !important;
   }
-  #menu-ajanlo a:hover{
+  #menu-essay a:hover{
     color: #3f8816 !important;
   }
   #menu-esemenyek a:hover{
@@ -1012,7 +1012,7 @@
   .active-kritika {
     color: #b13ab4 !important;
   }
-  .active-ajanlo {
+  .active-essay {
     color: #3f8816 !important;
   }
   .active-esemenyek {
