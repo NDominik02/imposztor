@@ -86,14 +86,13 @@ unset($_SESSION['form_data']);
 }
 html{
     height: 100vh !important;
-  overflow-y: hidden !important;
 
 }
 body {
     overflow-y: scroll;
     background-color: var(--clr-white);
     color: var(--clr-dark);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
@@ -228,26 +227,33 @@ footer {
         </div>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script>
-        var quill = new Quill('#editor-container', {
-            theme: 'snow',
-            modules: {
-                toolbar: [
-                    [{ 'header': [1, 2, 3, false] }],
-                    ['bold', 'italic', 'underline'],
-                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                    ['link', 'image'],
-                    [{ 'align': [] }],
-                    [{ 'color': [] }, { 'background': [] }],
-                ]
-            }
-        });
+    // Betűméret opciók regisztrálása
+    var Font = Quill.import('formats/size');
+    Font.whitelist = ['small', 'medium', 'large', 'huge'];  // Testreszabott betűméret opciók
+    Quill.register(Font, true);
 
-        // Betölti a Quill szerkesztő tartalmát a hidden inputba
-        document.querySelector('form').addEventListener('submit', function() {
-            var editorContent = document.querySelector('#editor-content');
-            editorContent.value = JSON.stringify(quill.getContents());
-        });
-    </script>
+    // Quill szerkesztő inicializálása testreszabott toolbar-ral
+    var quill = new Quill('#editor-container', {
+        theme: 'snow',
+        modules: {
+            toolbar: [
+                [{ 'header': [1, 2, 3, false] }],
+                [{ 'size': ['small', 'medium', 'large', 'huge'] }],
+                ['bold', 'italic', 'underline'],
+                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                ['link', 'image'],
+                [{ 'align': [] }],
+                [{ 'color': [] }, { 'background': [] }],
+            ]
+        }
+    });
+
+    // Betölti a Quill szerkesztő tartalmát a hidden inputba
+    document.querySelector('form').addEventListener('submit', function() {
+        var editorContent = document.querySelector('#editor-content');
+        editorContent.value = JSON.stringify(quill.getContents());
+    });
+</script>    
     
         <!-- Uploading an image -->
         <div class="book-card">

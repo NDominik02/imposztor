@@ -11,22 +11,30 @@ if (!$auth->is_authenticated() || $_SESSION["user"] != "admin") {
 }
 $post_repository = new PostRepository();
 
+function is_empty($input, $key)
+{
+    return !(isset($input[$key]) && trim($input[$key]) !== "");
+}
 function validate($input, &$errors, $auth)
 {
 
+    if (is_empty($input, "title")) {
+        $errors[] = "Nem adtál meg címet";
+    }
+    if (is_empty($input, "text")) {
+        $errors[] = "Nem adtál meg szöveget";
+    }
+    if (is_empty($input, "type")) {
+        $errors[] = "Nem adtad meg honnan szeretnéd törölni";
+    }
+
     return !(bool) $errors;
 }
+$errors = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (count($_POST) != 0) {
         if (validate($_POST, $errors, $auth)) {
-            //TODO - remove from repo
-            for($i = 0; $i < count($posts); $i++)
-            {
-                if($posts["post" . $i]->title == $_POST["postSelect"])
-                {
-                    $post_repository->remove("post" . $i);
-                }
-            }
+            // TODO - remove from repo
             header('Location: removePost.php');
             exit();
         }
@@ -53,7 +61,7 @@ unset($_SESSION['form_data']);
 
     <title>Imposztor | Poszt eltávolítása</title>
 
-<style>
+    <style>
 
     :root {
         --clr-main: #4c4d57;
@@ -147,7 +155,7 @@ unset($_SESSION['form_data']);
         padding: 10px;
         text-align: center;
     }
-</style>
+    </style>
 </head>
 
 <body>
@@ -155,20 +163,28 @@ unset($_SESSION['form_data']);
 <header>
         <h1><a href="index.php">Imposztor</a> > Poszt eltávolítása</h1>
 </header>
+<?php
+     if ($errors) {?>
+    <ul>
+        <?php foreach ($errors as $error) {?>
+        <li><?=$error?></li>
+        <?php }?>
+    </ul>
+
+<?php }?>
 
 <div id="content">
     <div id="card-list">
         <div class="book-card">
             <h2>Poszt eltávolítása</h2>
-            <form action="" method="post">
+            <form action="post">
                 <label for="title">Cím: </label>
-                <select name="postSelect" id="postSelect" style="width: 200px">
-                    <option value="">Válassz egyet</option> 
+                <select name="postSelect" id="postSelect">
+                <option value=""></option> <!-- Üres alapértelmezett opció -->
                 </select>
-                <br>
-                <input type="submit" value="Törlés">
             </form>
             <script src="assets/js/rmPost.js"></script>
+            <!-- TODO - (lehet elég lenne az addpostnál ez a funkció) -->
         </div>
     </div>
 </div>

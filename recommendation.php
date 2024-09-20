@@ -106,8 +106,8 @@
 						<li>
 							<span class="opener">Irodalom</span>
 							<ul>
-							<li id="menu-proza"><a href="prose.php">Líra</a></li>
-								<li id="menu-vers"><a href="lira.php">Vers</a></li>
+							<li id="menu-proza"><a href="prose.php">Próza</a></li>
+								<li id="menu-lira"><a href="lira.php">Líra</a></li>
 							</ul>
 						</li>
 						<li id="menu-kritika"><a href="criticism.php">Kritika</a></li>
